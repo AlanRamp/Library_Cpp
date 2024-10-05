@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1727391544 source:c:\users\usuario\documents\poo\actividad2\actividad2tests.cpp
+	<iostream>
+	<stdlib.h>
+	<string>
+	"Act2.h"
+
+1727391422 c:\users\usuario\documents\poo\actividad2\act2.h
+	<string>
+	<iostream>
+	<vector>
+
+1727391478 source:c:\users\usuario\documents\poo\actividad2\metodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Act2.h"
+
