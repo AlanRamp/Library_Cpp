@@ -1,0 +1,44 @@
+warning: in the working copy of 'Actividad2.cbp', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/Actividad2.cbp b/Actividad2.cbp[m
+[1mindex d415807..8006130 100644[m
+[1m--- a/Actividad2.cbp[m
+[1m+++ b/Actividad2.cbp[m
+[36m@@ -32,6 +32,9 @@[m
+ 			<Add option="-Wall" />[m
+ 			<Add option="-fexceptions" />[m
+ 		</Compiler>[m
+[32m+[m		[32m<Unit filename="Act2.h" />[m
+[32m+[m		[32m<Unit filename="Actividad2Tests.cpp" />[m
+[32m+[m		[32m<Unit filename="Metodos.cpp" />[m
+ 		<Unit filename="main.cpp" />[m
+ 		<Extensions>[m
+ 			<lib_finder disable_auto="1" />[m
+[1mdiff --git a/Actividad2.depend b/Actividad2.depend[m
+[1mindex 89113a7..2c4c00a 100644[m
+[1m--- a/Actividad2.depend[m
+[1m+++ b/Actividad2.depend[m
+[36m@@ -16,3 +16,20 @@[m
+ 	<vector>[m
+ 	"Act2.h"[m
+ [m
+[32m+[m[32m1727391544 source:c:\users\alann\onedrive\escritorio\actividad2\actividad2tests.cpp[m
+[32m+[m	[32m<iostream>[m
+[32m+[m	[32m<stdlib.h>[m
+[32m+[m	[32m<string>[m
+[32m+[m	[32m"Act2.h"[m
+[32m+[m
+[32m+[m[32m1727391422 c:\users\alann\onedrive\escritorio\actividad2\act2.h[m
+[32m+[m	[32m<string>[m
+[32m+[m	[32m<iostream>[m
+[32m+[m	[32m<vector>[m
+[32m+[m
+[32m+[m[32m1727391600 source:c:\users\alann\onedrive\escritorio\actividad2\metodos.cpp[m
+[32m+[m	[32m<string>[m
+[32m+[m	[32m<iostream>[m
+[32m+[m	[32m<vector>[m
+[32m+[m	[32m"Act2.h"[m
+[32m+[m
+[1mdiff --git a/obj/Debug/main.o b/obj/Debug/main.o[m
+[1mdeleted file mode 100644[m
+[1mindex 1c9a9e0..0000000[m
+Binary files a/obj/Debug/main.o and /dev/null differ

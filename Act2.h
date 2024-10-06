@@ -5,7 +5,17 @@
 #include<vector>
 using namespace std;
 
+class Biblioteca{
+public:
+    Bilbioteca();
+    void agregarLibro(Libro*);
+    void agregarUsuario(Usuario*);
 
+
+private:
+    vector <Libro*> LibrosBiblioteca;
+    vector <Usuario*>UsuariosBiblioteca;
+};
 class Libro{
 public:
     //constructor
