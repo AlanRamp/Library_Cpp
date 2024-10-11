@@ -5,17 +5,7 @@
 #include<vector>
 using namespace std;
 
-class Biblioteca{
-public:
-    Bilbioteca();
-    void agregarLibro(Libro*);
-    void agregarUsuario(Usuario*);
 
-
-private:
-    vector <Libro*> LibrosBiblioteca;
-    vector <Usuario*>UsuariosBiblioteca;
-};
 class Libro{
 public:
     //constructor
@@ -26,6 +16,7 @@ public:
     void devuelto();
     //devolver el estado del libro
     bool dispCheck()const;
+    string isbnString();
     //descripcion en el retorno del metodo
     string descp();
 private:
@@ -72,6 +63,25 @@ private:
 
 
 
+};
+class Biblioteca{
+public:
+    Bilbioteca();
+    bool isbnCheck(Libro*);
+    void agregarLibro(Libro*);
+    void agregarUsuario(Usuario*);
+    void prestarLibro(string, string);
+    void devolverLibro(string, string);
+    Libro* buscarLibro(string) const;
+    Usuario* buscarUsuario(string) const;
+    string mostrarLibros() const;
+    string mostrarUsuarios() const;
+
+
+
+private:
+    vector <Libro*> LibrosBiblioteca;
+    vector <Usuario*>UsuariosBiblioteca;
 };
 
 
