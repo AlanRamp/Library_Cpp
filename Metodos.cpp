@@ -18,6 +18,9 @@ using namespace std;
     bool Libro::dispCheck()const{
         return disp;
     }
+    string Libro::isbnString(){
+        return isbn;
+    }
     string Libro::descp(){
         return (titulo+" | "+isbn+" | "+autor);
     }
@@ -82,6 +85,55 @@ using namespace std;
         }
     }
     }
+
+
+    bool Biblioteca::isbnCheck(Libro* libro){
+        int i;
+        bool ret;
+        // de string a entero
+        string Isbn = libro->isbnString();
+        int validador=0;
+        //valida el largo
+        if (Isbn.length() != 10) {
+        return false;
+        }
+        //transforma cada digito individual y los deja en forma para evaluar el isbn
+        //sin llegar al ultimo debido a que puede ser un caracter
+        for(i=0;i<9;i++){
+            //separa por digitos y multiplica de manera significativa de izquierda a derecha decendiendo desde 10 a 0
+            validador+=(Isbn[i]-'0')*(10-i);
+            //suma de valores ya trabajados
+        }
+        char ultimo = Isbn[9];
+        //el ultimo caracter puede ser un caracter X que expresa 10
+        if (ultimo == 'X') {
+            validador += 10;
+        } else if (isdigit(ultimo)) {
+            validador += (ultimo - '0');
+        } else {
+            return false;
+        }
+
+
+        return (validador%11==0);
+    }
+    void Biblioteca::agregarLibro(Libro* libro){
+        if(libro->dispCheck()&&isbnCheck(libro)){
+            LibrosBiblioteca.push_back(libro);
+            cout<<"Libro agregado con exito"<<endl;
+        }else{
+            cout<<"Libro no disponible para agregar!"<<endl;
+        }
+    }
+    void Biblioteca::agregarUsuario(Usuario* usuario){
+        if(true){
+            UsuariosBiblioteca.push_back(usuario);
+            cout<<"Usuario agregado con exito"<<endl;
+        }else{
+            cout<<"Libro no disponible para agregar!"<<endl;
+            }
+    }
+
 
 
 
