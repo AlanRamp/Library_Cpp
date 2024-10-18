@@ -18,14 +18,14 @@ int main(){
     //Declaracion de libros para el uso del programa
     Libro Libro1("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235);
     Libro Libro2("8475300219", "Crimen y castigo", "Fiódor Dostoyevski", 671);
-    Libro Libro3("0000003", "Los hermanos Karamazov", "Fiódor Dostoyevski", 824);
-    Libro Libro4("0000004", "El idiota", "Fiódor Dostoyevski", 656);
-    Libro Libro5("0000005", "El jugador", "Fiódor Dostoyevski", 207);
-    Libro Libro6("0000006", "Memorias del subsuelo", "Fiódor Dostoyevski", 160);
-    Libro Libro7("0000007", "Los demonios", "Fiódor Dostoyevski", 768);
-    Libro Libro8("0000008", "El adolescente", "Fiódor Dostoyevski", 606);
-    Libro Libro9("0000009", "Humillados y ofendidos", "Fiódor Dostoyevski", 360);
-    Libro Libro10("0000010", "La vuelta al mundo en 80 dias", "Julio Verne", 1234);
+    Libro Libro3("8422543001", "Los hermanos Karamazov", "Fiódor Dostoyevski", 824);
+    Libro Libro4("6073168136", "El idiota", "Fiódor Dostoyevski", 656);
+    Libro Libro5("8481301310", "El jugador", "Fiódor Dostoyevski", 207);
+    Libro Libro6("8417782753", "Memorias del subsuelo", "Fiódor Dostoyevski", 160);
+    Libro Libro7("8476570090", "Los demonios i", "Fiódor Dostoyevski", 768);
+    Libro Libro8("8426155340", "El adolescente", "Fiódor Dostoyevski", 606);
+    Libro Libro9("8466305831", "Humillados y ofendidos", "Fiódor Dostoyevski", 360);
+    Libro Libro10("8496246116", "La vuelta al mundo en 80 dias", "Julio Verne", 1234);
     //Marcar todos como prestados para probar el vector de apuntadores
     //User1.registrarPrestamo(&Libro1);
     User1.registrarPrestamo(&Libro2);
@@ -62,6 +62,12 @@ int main(){
     system("pause");
     system("cls");
 
+
+
+
+    //BIBLIOTECA
+
+
     cout<<"Agregar libros a biblioteca"<<endl;
     biblioteca.agregarLibro(&Libro1);
     biblioteca.agregarLibro(&Libro2);
@@ -69,34 +75,53 @@ int main(){
     biblioteca.agregarLibro(&Libro4);
     biblioteca.agregarLibro(&Libro5);
     biblioteca.agregarLibro(&Libro6);
-    cout<<endl;
-    cout<<"agregar Usuarios a biblioteca"<<endl;
+    system("pause");
+    system("cls");
+    cout<<"Agregar Usuarios a biblioteca"<<endl;
     biblioteca.agregarUsuario(&User1);
     biblioteca.agregarUsuario(&User2);
-    cout<<endl;
+    system("pause");
+    system("cls");
     cout<<"Buscar libro"<<endl;
-    biblioteca.buscarLibro("8402103472");
-    biblioteca.buscarLibro("0000010000");
-    cout<<endl;
+    cout<<"1"<<endl;
+    cout<<biblioteca.buscarLibro("8402103472")<<endl;
+    cout<<"2"<<endl;
+    cout<<biblioteca.buscarLibro("0000010000")<<endl;
+    system("pause");
+    system("cls");
     cout<<"Buscar usuario"<<endl;
-    biblioteca.buscarUsuario("0000001");
-    biblioteca.buscarUsuario("0000003");
-    cout<<endl;
+    cout<<"1"<<endl;
+    cout<<biblioteca.buscarUsuario("0000001")<<endl;
+    cout<<"2"<<endl;
+    cout<<biblioteca.buscarUsuario("0000003")<<endl;
+    system("pause");
+    system("cls");
     cout<<"Prestamos"<<endl;
+    cout<<"1"<<endl;
     biblioteca.prestarLibro("8402103472","0000001");
+    cout<<"2"<<endl;
     biblioteca.prestarLibro("8402103472","0000003");
     cout<<endl;
+    system("pause");
+    system("cls");
     cout<<"Devoluciones"<<endl;
+    cout<<"1"<<endl;
     biblioteca.devolverLibro("8402103472","0000001");
+    cout<<"2"<<endl;
     biblioteca.devolverLibro("8402103472","0000003");
     cout<<endl;
-    cout<<"libros"<<endl;
+    system("pause");
+    system("cls");
+    cout<<"Libros"<<endl;
     biblioteca.mostrarLibros();
     cout<<endl;
-    cout<<"usuarios"<<endl;
+    system("pause");
+    system("cls");
+    cout<<"Usuarios"<<endl;
     biblioteca.mostrarUsuarios();
-
-
+    cout<<endl;
+    system("pause");
+    system("cls");
     return 0;
 
 }

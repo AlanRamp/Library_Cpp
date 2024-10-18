@@ -16,18 +16,37 @@
 	<vector>
 	"Act2.h"
 
-1728252800 source:c:\users\alann\onedrive\escritorio\actividad2\actividad2tests.cpp
+1729221349 source:c:\users\alann\onedrive\escritorio\actividad2\actividad2tests.cpp
+	<iostream>
 	<iostream>
 	<stdlib.h>
 	<string>
 	"Act2.h"
 
-1728248415 c:\users\alann\onedrive\escritorio\actividad2\act2.h
+1729216645 c:\users\alann\onedrive\escritorio\actividad2\act2.h
 	<string>
 	<iostream>
 	<vector>
 
-1728252447 source:c:\users\alann\onedrive\escritorio\actividad2\metodos.cpp
+1729217670 source:c:\users\alann\onedrive\escritorio\actividad2\metodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Act2.h"
+
+1729220902 source:c:\users\alann\onedrive\escritorio\actividad2\bibliotecametodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Act2.h"
+
+1729218210 source:c:\users\alann\onedrive\escritorio\actividad2\librometodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Act2.h"
+
+1729220030 source:c:\users\alann\onedrive\escritorio\actividad2\usuariometodos.cpp
 	<string>
 	<iostream>
 	<vector>

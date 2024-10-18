@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Act2.h" />
 		<Unit filename="Actividad2Tests.cpp" />
+		<Unit filename="BibliotecaMetodos.cpp" />
 		<Unit filename="Metodos.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
