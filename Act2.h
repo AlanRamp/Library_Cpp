@@ -39,13 +39,20 @@ public:
     //elimina el libro del vector de prestamos en base a su descripcion completa
     //cambia el estado a disponible
     void registrarDevolucion(Libro* libro);
+    //Validar el estado del usuario en la biblioteca
+    bool check_usinbib() const;
+    void change_usinbib();
 
 
 
 
 //informacion del usuario
     string toString();
+    string idString();
+
+//prestamos activos
     vector<Libro*> obtenerPrestamosActivos()const;
+//mostrar
     void mostrarPrestamos()const;
 
 
@@ -53,9 +60,9 @@ public:
 
 
 private:
+    bool usinbib=false;
     vector<Libro*> listLibros;
     string name;
-    //6 caracteres
     string id;
     string email;
 
@@ -66,7 +73,7 @@ private:
 };
 class Biblioteca{
 public:
-    Bilbioteca();
+    Biblioteca Bilbioteca();
     bool isbnCheck(Libro*);
     void agregarLibro(Libro*);
     void agregarUsuario(Usuario*);

@@ -84,12 +84,21 @@ using namespace std;
             cout<<endl;
         }
     }
+
+    }
+    bool Usuario::check_usinbib()const{
+        return usinbib;
+    }
+    void Usuario::change_usinbib(){
+        usinbib=true;
+    }
+    string Usuario::idString(){
+        return id;
     }
 
 
     bool Biblioteca::isbnCheck(Libro* libro){
         int i;
-        bool ret;
         // de string a entero
         string Isbn = libro->isbnString();
         int validador=0;
@@ -126,15 +135,83 @@ using namespace std;
         }
     }
     void Biblioteca::agregarUsuario(Usuario* usuario){
-        if(true){
+        if(!usuario->check_usinbib()){
             UsuariosBiblioteca.push_back(usuario);
             cout<<"Usuario agregado con exito"<<endl;
+            usuario->change_usinbib();
         }else{
-            cout<<"Libro no disponible para agregar!"<<endl;
+            cout<<"Usuario no disponible para agregar!"<<endl;
             }
     }
+    Libro* Biblioteca::buscarLibro(string isbn)const{
+        bool flag=true;
+        Libro* ret=nullptr;
+        for(int i=0; i<=LibrosBiblioteca.size() && flag; i++){
+            if(LibrosBiblioteca[i]->isbnString()==isbn && LibrosBiblioteca[i]->dispCheck()){
+                ret = LibrosBiblioteca[i];
+                flag=false;
+                cout<<"pass";
+            }
+        }
+        if(flag){
+            cout<<"X";
+        }else{
+        return ret;
+        }
+    }
+    Usuario* Biblioteca::buscarUsuario(string id)const{
+        Usuario* ret;
+        bool flag = true;
+        for(int i=0; i<=UsuariosBiblioteca.size()&& flag; i++){
 
+            if(UsuariosBiblioteca[i]->idString()==id && UsuariosBiblioteca[i]->check_usinbib()){
 
+                ret = UsuariosBiblioteca[i];
+                flag=false;
+            }
+        }
+        if(flag){
+            cout<<"X";
+        }else{
+        return ret;
+        }
+    }
+    void Biblioteca::prestarLibro(string isbnlib, string idus){
+        Libro* lib = buscarLibro(isbnlib);
+        Usuario* user = buscarUsuario(idus);
+        if(lib!=nullptr&&user!=nullptr){
+            user->registrarPrestamo(lib);
+            lib->prestado();
+            cout<<"prestamo registrado!"<<endl;
+
+        }else{
+            cout<<"Alguno de los datos proporcionados es incorrecto"<<endl;
+
+        }
+
+    }
+    void Biblioteca::devolverLibro(string isbnlib, string idus){
+        Libro* lib = buscarLibro(isbnlib);
+        Usuario* user = buscarUsuario(idus);
+        if(lib==nullptr&&user!=nullptr){
+            user->registrarDevolucion(lib);
+            lib->devuelto();
+            cout<<"devolucion registrada!"<<endl;
+        }else{
+            cout<<"Alguno de los datos proporcionados es incorrecto"<<endl;
+
+        }
+    }
+    string Biblioteca::mostrarLibros()const{
+        for(int i = 0; i<=LibrosBiblioteca.size();i++){
+            cout<<LibrosBiblioteca[i]->descp()<<endl;
+        }
+    }
+    string Biblioteca::mostrarUsuarios()const{
+        for(int i = 0; i<=LibrosBiblioteca.size();i++){
+            cout<<UsuariosBiblioteca[i]->toString()<<endl;
+        }
+    }
 
 
 

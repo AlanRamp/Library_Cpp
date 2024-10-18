@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 #include<stdlib.h>
 #include <string>
 #include "Act2.h"
@@ -12,6 +13,8 @@ int main(){
     Biblioteca biblioteca = Biblioteca();
     //Declaracion del usuario
     Usuario User1 = Usuario("0000001","Usuario1","usuario1@user.com");
+    Usuario User2 = Usuario("0000002","Usuario2","usuario2@user.com");
+    Usuario User3 = Usuario("0000003","Usuario3","usuario3@user.com");
     //Declaracion de libros para el uso del programa
     Libro Libro1("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235);
     Libro Libro2("8475300219", "Crimen y castigo", "Fiódor Dostoyevski", 671);
@@ -40,6 +43,13 @@ int main(){
     system("pause");
     system("cls");
     //retornar un libro para elimiinar del vector
+    User1.registrarDevolucion(&Libro3);
+    User1.registrarDevolucion(&Libro4);
+    User1.registrarDevolucion(&Libro5);
+    User1.registrarDevolucion(&Libro6);
+    User1.registrarDevolucion(&Libro7);
+    User1.registrarDevolucion(&Libro8);
+    User1.registrarDevolucion(&Libro9);
     User1.registrarDevolucion(&Libro10);
     //Marcar una espera para limpiar la pantalla
     system("pause");
@@ -52,10 +62,42 @@ int main(){
     system("pause");
     system("cls");
 
-    cout<<"Agregar a biblioteca"<<endl;
+    cout<<"Agregar libros a biblioteca"<<endl;
     biblioteca.agregarLibro(&Libro1);
+    biblioteca.agregarLibro(&Libro2);
+    biblioteca.agregarLibro(&Libro3);
+    biblioteca.agregarLibro(&Libro4);
+    biblioteca.agregarLibro(&Libro5);
+    biblioteca.agregarLibro(&Libro6);
     cout<<endl;
+    cout<<"agregar Usuarios a biblioteca"<<endl;
+    biblioteca.agregarUsuario(&User1);
+    biblioteca.agregarUsuario(&User2);
+    cout<<endl;
+    cout<<"Buscar libro"<<endl;
+    biblioteca.buscarLibro("8402103472");
+    biblioteca.buscarLibro("0000010000");
+    cout<<endl;
+    cout<<"Buscar usuario"<<endl;
+    biblioteca.buscarUsuario("0000001");
+    biblioteca.buscarUsuario("0000003");
+    cout<<endl;
+    cout<<"Prestamos"<<endl;
+    biblioteca.prestarLibro("8402103472","0000001");
+    biblioteca.prestarLibro("8402103472","0000003");
+    cout<<endl;
+    cout<<"Devoluciones"<<endl;
+    biblioteca.devolverLibro("8402103472","0000001");
+    biblioteca.devolverLibro("8402103472","0000003");
+    cout<<endl;
+    cout<<"libros"<<endl;
+    biblioteca.mostrarLibros();
+    cout<<endl;
+    cout<<"usuarios"<<endl;
+    biblioteca.mostrarUsuarios();
+
+
+    return 0;
 
 }
-
 
