@@ -101,15 +101,21 @@ bool Biblioteca::isbnCheck(Libro* libro){
 
         }
     }
-    string Biblioteca::mostrarLibros()const{
+    string Biblioteca::descLibro(Libro* libro)const{
+        return libro->descp();
+    }
+    string Biblioteca::descUsuario(Usuario* usuario)const{
+        return usuario->toString();
+    }
+    void Biblioteca::mostrarLibros()const{
         for(int i = 0; i<LibrosBiblioteca.size();i++){
-            string desc = LibrosBiblioteca[i]->descp();
+            string desc = descLibro(LibrosBiblioteca[i]);
             cout<<desc<<endl;
         }
     }
-    string Biblioteca::mostrarUsuarios()const{
+    void Biblioteca::mostrarUsuarios()const{
         for(int i = 0; i<UsuariosBiblioteca.size();i++){
-            string desc = UsuariosBiblioteca[i]->toString();
+            string desc = descUsuario(UsuariosBiblioteca[i]);
             cout<<desc<<endl;
         }
     }

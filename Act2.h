@@ -73,7 +73,7 @@ private:
 };
 class Biblioteca{
 public:
-    Biblioteca Bilbioteca();
+    Bilbioteca();
     bool isbnCheck(Libro*);
     void agregarLibro(Libro*);
     void agregarUsuario(Usuario*);
@@ -81,8 +81,10 @@ public:
     void devolverLibro(string, string);
     Libro* buscarLibro(string) const;
     Usuario* buscarUsuario(string) const;
-    string mostrarLibros() const;
-    string mostrarUsuarios() const;
+    string descLibro(Libro*)const;
+    string descUsuario(Usuario*)const;
+    void mostrarLibros() const;
+    void mostrarUsuarios() const;
 
 
 
