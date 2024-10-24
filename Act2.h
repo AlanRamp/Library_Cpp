@@ -38,9 +38,6 @@ class LibroFicion:public Libro{
 public:
     LibroFicion(string _isbn, string _titulo, string _autor, int _aniopubli, string _genero):Libro(_isbn,_titulo,_autor,_aniopubli),genero(_genero)
     {}
-    string getGenero(){
-        return genero;
-    }
     string descp()override;
 private:
     string genero;
