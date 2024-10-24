@@ -16,9 +16,14 @@ public:
     void devuelto();
     //devolver el estado del libro
     bool dispCheck()const;
-    string isbnString();
+
     //descripcion en el retorno del metodo
-    string descp();
+    virtual string descp();
+    //getters
+    string isbnString();
+    string tituloString();
+    string autorString();
+    int anioNum();
 private:
     //6 caracteres
     string isbn;
@@ -28,6 +33,26 @@ private:
     bool disp=true;
 
 
+};
+class LibroFicion:public Libro{
+public:
+    LibroFicion(string _isbn, string _titulo, string _autor, int _aniopubli, string _genero):Libro(_isbn,_titulo,_autor,_aniopubli),genero(_genero)
+    {}
+    string getGenero(){
+        return genero;
+    }
+    string descp()override;
+private:
+    string genero;
+
+};
+class LibroNoFicion:public Libro{
+public:
+    LibroNoFicion(string _isbn, string _titulo, string _autor, int _aniopubli,string _tema):Libro(_isbn,_titulo,_autor,_aniopubli),tema(_tema)
+    {}
+    string descp() override;
+private:
+    string tema;
 };
 class Usuario{
 public:

@@ -26,6 +26,7 @@ int main(){
     Libro Libro8("8426155340", "El adolescente", "Fiódor Dostoyevski", 606);
     Libro Libro9("8466305831", "Humillados y ofendidos", "Fiódor Dostoyevski", 360);
     Libro Libro10("8496246116", "La vuelta al mundo en 80 dias", "Julio Verne", 1234);
+    LibroFicion libro11("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235,"ficcion");
     //Marcar todos como prestados para probar el vector de apuntadores
     //User1.registrarPrestamo(&Libro1);
     User1.registrarPrestamo(&Libro2);
@@ -122,6 +123,7 @@ int main(){
     cout<<endl;
     system("pause");
     system("cls");
+    cout<<libro11.descp()<<endl;
     return 0;
 
 }

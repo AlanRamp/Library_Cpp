@@ -18,12 +18,26 @@ using namespace std;
     bool Libro::dispCheck()const{
         return disp;
     }
-    string Libro::isbnString(){
-        return isbn;
-    }
     string Libro::descp(){
         return (titulo+" | "+isbn+" | "+autor);
     }
+    string Libro::isbnString(){
+        return isbn;
+    }
+    string Libro::tituloString(){
+        return titulo;
+    }
+    string Libro::autorString(){
+        return autor;
+    }
+    int Libro::anioNum(){
+        return anioPubli;
+    }
 
 
-
+    string LibroFicion::descp(){
+        return(tituloString()+" | "+isbnString()+" | "+autorString()+" | "+getGenero());
+    }
+    string LibroNoFicion::descp(){
+        return(tituloString()+" | "+isbnString()+" | "+autorString()+" | "+tema);
+    }
