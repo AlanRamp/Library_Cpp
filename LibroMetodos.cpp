@@ -36,7 +36,7 @@ using namespace std;
 
 
     string LibroFicion::descp(){
-        return(tituloString()+" | "+isbnString()+" | "+autorString()+" | "+getGenero());
+        return(tituloString()+" | "+isbnString()+" | "+autorString()+" | "+genero);
     }
     string LibroNoFicion::descp(){
         return(tituloString()+" | "+isbnString()+" | "+autorString()+" | "+tema);
