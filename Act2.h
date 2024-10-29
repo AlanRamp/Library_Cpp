@@ -96,6 +96,14 @@ public:
 private:
     string division;
 };
+class UsuarioBibliotecario:public Usuario{
+public:
+    UsuarioBibliotecario(string _id, string _nombre, string _email, string _division):Usuario(_id, _nombre, _email)
+    {}
+
+private:
+
+};
 
 
 class Biblioteca{
