@@ -66,6 +66,19 @@ using namespace std;
     string Usuario::idString(){
         return id;
     }
+    string Usuario::nombreString(){
+        return name;
+    }
+    string Usuario::emailString(){
+        return email;
+    }
+
+string UsuarioEstudiante::toString(){
+    return (idString()+" "+nombreString()+" "+emailString()+" "+carrera);
+}
+string UsuarioProfesor::toString(){
+    return (idString()+" "+nombreString()+" "+emailString()+" "+division);
+}
 
 
 

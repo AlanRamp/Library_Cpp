@@ -64,35 +64,40 @@ public:
     //Validar el estado del usuario en la biblioteca
     bool check_usinbib() const;
     void change_usinbib();
-
-
-
-
 //informacion del usuario
-    string toString();
-    string idString();
-
+    virtual string toString();
 //prestamos activos
     vector<Libro*> obtenerPrestamosActivos()const;
 //mostrar
     void mostrarPrestamos()const;
-
-
-
-
-
+    string idString();
+    string nombreString();
+    string emailString();
 private:
     bool usinbib=false;
     vector<Libro*> listLibros;
     string name;
     string id;
     string email;
-
-
-
-
-
 };
+class UsuarioEstudiante: public Usuario{
+public:
+    UsuarioEstudiante(string _id, string _nombre, string _email, string _carrera):Usuario(_id, _nombre, _email),carrera(_carrera)
+    {}
+    string toString() override;
+private:
+    string carrera;
+};
+class UsuarioProfesor: public Usuario{
+public:
+    UsuarioProfesor(string _id, string _nombre, string _email, string _division):Usuario(_id, _nombre, _email),division(_division)
+    {}
+    string toString() override;
+private:
+    string division;
+};
+
+
 class Biblioteca{
 public:
     Bilbioteca();

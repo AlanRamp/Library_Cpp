@@ -15,6 +15,8 @@ int main(){
     Usuario User1 = Usuario("0000001","Usuario1","usuario1@user.com");
     Usuario User2 = Usuario("0000002","Usuario2","usuario2@user.com");
     Usuario User3 = Usuario("0000003","Usuario3","usuario3@user.com");
+    UsuarioEstudiante User4 = UsuarioEstudiante("0000004","Usuario4","usuario4@user.com", "Computacion");
+    UsuarioProfesor User5 = UsuarioProfesor("0000005","Usuario5","usuario5@user.com", "DIVTIC");
     //Declaracion de libros para el uso del programa
     Libro Libro1("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235);
     Libro Libro2("8475300219", "Crimen y castigo", "Fiódor Dostoyevski", 671);
@@ -123,7 +125,14 @@ int main(){
     cout<<endl;
     system("pause");
     system("cls");
+    cout<<"Libro ficcion"<<endl;
     cout<<libro11.descp()<<endl;
+    system("pause");
+    system("cls");
+    cout<<"Usuario Estudiante"<<endl;
+    cout<<User4.toString()<<endl;
+    cout<<"Usuario Profesor"<<endl;
+    cout<<User5.toString()<<endl;
     return 0;
 
 }
