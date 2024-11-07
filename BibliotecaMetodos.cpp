@@ -33,6 +33,18 @@ bool Biblioteca::isbnCheck(Libro* libro){
 
         return (validador%11==0);
     }
+    int Biblioteca::logger(string id, string pass){
+        Usuario* user = buscarUsuario(id);
+        int exit=5;
+        if(user->idString() == "0000000" && pass == user->passString()){
+            exit = 0;
+        }else if(user->idString() != "0000000" && pass == user->passString()){
+            exit = 1;
+        }else{
+            exit = 2;
+        }
+        return exit;
+    }
     void Biblioteca::agregarLibro(Libro* libro){
         if(libro->dispCheck()&&isbnCheck(libro)){
             LibrosBiblioteca.push_back(libro);

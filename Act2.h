@@ -6,10 +6,11 @@
 using namespace std;
 class Libro;
 class Usuario;
-class Biblioteca;
 class Biblioteca{
 public:
     Bilbioteca();
+    int logger(string, string);
+    void menu();
     bool isbnCheck(Libro*);
     void agregarLibro(Libro*);
     void agregarUsuario(Usuario*);
@@ -78,7 +79,7 @@ private:
 class Usuario{
 public:
     //constructor
-    Usuario(string , string , string, int );
+    Usuario(string , string , string,string, int );
     //agrega al vector el libro y cambia su estado
     void registrarPrestamo(Libro* libro);
 
@@ -97,7 +98,9 @@ public:
     string idString();
     string nombreString();
     string emailString();
+    string passString();
 private:
+    string pass;
     int timeBook;
     bool usinbib=false;
     vector<Libro*> listLibros;
@@ -107,7 +110,7 @@ private:
 };
 class UsuarioEstudiante: public Usuario{
 public:
-    UsuarioEstudiante(string _id, string _nombre, string _email, string _carrera, int _timeBook):Usuario(_id, _nombre, _email,_timeBook),carrera(_carrera)
+    UsuarioEstudiante(string _id, string _nombre, string _email, string _carrera,string _pass, int _timeBook):Usuario(_id, _nombre, _email,_pass,_timeBook),carrera(_carrera)
     {}
     string toString() override;
 private:
@@ -116,7 +119,7 @@ private:
 };
 class UsuarioProfesor: public Usuario{
 public:
-    UsuarioProfesor(string _id, string _nombre, string _email, string _division, int _timeBook):Usuario(_id, _nombre, _email,_timeBook),division(_division)
+    UsuarioProfesor(string _id, string _nombre, string _email, string _division, string _pass,int _timeBook):Usuario(_id, _nombre, _email,_pass,_timeBook),division(_division)
     {}
     string toString() override;
 private:
@@ -125,11 +128,8 @@ private:
 };
 class UsuarioBibliotecario:public Usuario, public Biblioteca{
 public:
-    UsuarioBibliotecario(string _id, string _nombre, string _email, string _division, int _timeBook):Usuario(_id, _nombre, _email,_timeBook)
+    UsuarioBibliotecario(string _id, string _nombre, string _email, string _division, string _pass,int _timeBook):Usuario(_id, _nombre, _email,_pass,_timeBook)
     {}
-    void agregarLibro(Biblioteca* biblioteca);
-    void agregarUsuario(Biblioteca* biblioteca);
-
 private:
 
 };

@@ -52,19 +52,19 @@
 	<vector>
 	"Act2.h"
 
-1730239269 source:c:\users\usuario\documents\gitpoo\actividad2tests.cpp
+1731017086 source:c:\users\usuario\documents\gitpoo\actividad2tests.cpp
 	<iostream>
 	<iostream>
 	<stdlib.h>
 	<string>
 	"Act2.h"
 
-1731016228 c:\users\usuario\documents\gitpoo\act2.h
+1731017944 c:\users\usuario\documents\gitpoo\act2.h
 	<string>
 	<iostream>
 	<vector>
 
-1729807831 source:c:\users\usuario\documents\gitpoo\bibliotecametodos.cpp
+1731017050 source:c:\users\usuario\documents\gitpoo\bibliotecametodos.cpp
 	<string>
 	<iostream>
 	<vector>
@@ -76,9 +76,16 @@
 	<vector>
 	"Act2.h"
 
-1731015878 source:c:\users\usuario\documents\gitpoo\usuariometodos.cpp
+1731017050 source:c:\users\usuario\documents\gitpoo\usuariometodos.cpp
 	<string>
 	<iostream>
 	<vector>
+	"Act2.h"
+
+1731017240 source:c:\users\usuario\documents\gitpoo\interfaz.cpp
+	<iostream>
+	<iostream>
+	<stdlib.h>
+	<string>
 	"Act2.h"
 
