@@ -6,8 +6,8 @@ using namespace std;
 
 //USUARIO
         //constructor
-    Usuario::Usuario(string _id, string _nombre, string _email)
-    :id(_id), name(_nombre), email(_email)
+    Usuario::Usuario(string _id, string _nombre, string _email, int _timeBook)
+    :id(_id), name(_nombre), email(_email), timeBook(_timeBook)
     {}
         //registro Libros
     void Usuario::registrarPrestamo(Libro* libro){

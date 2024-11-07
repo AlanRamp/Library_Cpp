@@ -12,11 +12,11 @@ D20 POO MIGUEL ANGEL GUERRERO SEGURA RAMIREZ
 int main(){
     Biblioteca biblioteca = Biblioteca();
     //Declaracion del usuario
-    Usuario User1 = Usuario("0000001","Usuario1","usuario1@user.com");
-    Usuario User2 = Usuario("0000002","Usuario2","usuario2@user.com");
-    Usuario User3 = Usuario("0000003","Usuario3","usuario3@user.com");
-    UsuarioEstudiante User4 = UsuarioEstudiante("0000004","Usuario4","usuario4@user.com", "Computacion");
-    UsuarioProfesor User5 = UsuarioProfesor("0000005","Usuario5","usuario5@user.com", "DIVTIC");
+    Usuario User1 = Usuario("0000001","Usuario1","usuario1@user.com",7);
+    Usuario User2 = Usuario("0000002","Usuario2","usuario2@user.com",7);
+    Usuario User3 = Usuario("0000003","Usuario3","usuario3@user.com",7);
+    UsuarioEstudiante User4 = UsuarioEstudiante("0000004","Usuario4","usuario4@user.com", "Computacion",7);
+    UsuarioProfesor User5 = UsuarioProfesor("0000005","Usuario5","usuario5@user.com", "DIVTIC",7);
     //Declaracion de libros para el uso del programa
     Libro Libro1("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235);
     Libro Libro2("8475300219", "Crimen y castigo", "Fiódor Dostoyevski", 671);

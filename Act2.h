@@ -4,6 +4,30 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+class Libro;
+class Usuario;
+class Biblioteca;
+class Biblioteca{
+public:
+    Bilbioteca();
+    bool isbnCheck(Libro*);
+    void agregarLibro(Libro*);
+    void agregarUsuario(Usuario*);
+    void prestarLibro(string, string);
+    void devolverLibro(string, string);
+    Libro* buscarLibro(string) const;
+    Usuario* buscarUsuario(string) const;
+    string descLibro(Libro*)const;
+    string descUsuario(Usuario*)const;
+    void mostrarLibros() const;
+    void mostrarUsuarios() const;
+
+
+
+private:
+    vector <Libro*> LibrosBiblioteca;
+    vector <Usuario*>UsuariosBiblioteca;
+};
 
 
 class Libro{
@@ -54,7 +78,7 @@ private:
 class Usuario{
 public:
     //constructor
-    Usuario(string , string , string );
+    Usuario(string , string , string, int );
     //agrega al vector el libro y cambia su estado
     void registrarPrestamo(Libro* libro);
 
@@ -74,6 +98,7 @@ public:
     string nombreString();
     string emailString();
 private:
+    int timeBook;
     bool usinbib=false;
     vector<Libro*> listLibros;
     string name;
@@ -82,51 +107,34 @@ private:
 };
 class UsuarioEstudiante: public Usuario{
 public:
-    UsuarioEstudiante(string _id, string _nombre, string _email, string _carrera):Usuario(_id, _nombre, _email),carrera(_carrera)
+    UsuarioEstudiante(string _id, string _nombre, string _email, string _carrera, int _timeBook):Usuario(_id, _nombre, _email,_timeBook),carrera(_carrera)
     {}
     string toString() override;
 private:
+
     string carrera;
 };
 class UsuarioProfesor: public Usuario{
 public:
-    UsuarioProfesor(string _id, string _nombre, string _email, string _division):Usuario(_id, _nombre, _email),division(_division)
+    UsuarioProfesor(string _id, string _nombre, string _email, string _division, int _timeBook):Usuario(_id, _nombre, _email,_timeBook),division(_division)
     {}
     string toString() override;
 private:
+
     string division;
 };
-class UsuarioBibliotecario:public Usuario{
+class UsuarioBibliotecario:public Usuario, public Biblioteca{
 public:
-    UsuarioBibliotecario(string _id, string _nombre, string _email, string _division):Usuario(_id, _nombre, _email)
+    UsuarioBibliotecario(string _id, string _nombre, string _email, string _division, int _timeBook):Usuario(_id, _nombre, _email,_timeBook)
     {}
+    void agregarLibro(Biblioteca* biblioteca);
+    void agregarUsuario(Biblioteca* biblioteca);
 
 private:
 
 };
 
 
-class Biblioteca{
-public:
-    Bilbioteca();
-    bool isbnCheck(Libro*);
-    void agregarLibro(Libro*);
-    void agregarUsuario(Usuario*);
-    void prestarLibro(string, string);
-    void devolverLibro(string, string);
-    Libro* buscarLibro(string) const;
-    Usuario* buscarUsuario(string) const;
-    string descLibro(Libro*)const;
-    string descUsuario(Usuario*)const;
-    void mostrarLibros() const;
-    void mostrarUsuarios() const;
-
-
-
-private:
-    vector <Libro*> LibrosBiblioteca;
-    vector <Usuario*>UsuariosBiblioteca;
-};
 
 
 
