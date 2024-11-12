@@ -45,6 +45,44 @@ bool Biblioteca::isbnCheck(Libro* libro){
         }
         return exit;
     }
+    void Biblioteca::menu(){
+        string id, pass;
+        bool menuCont=true, loggCont=true;
+        int log_exit;
+        int opc;
+        int menuChan;
+        while(loggCont){
+            cout<<"Ingrese su id de usuario: "endl;
+            cin>>id;
+            cout<<"Ingrese su contraseña de usuario: "endl;
+            cin>>pass;
+            log_exit = logger(id, pass);
+            if(log_exit==0 || log exit == 1){
+                loggCont=false;
+            }else{
+                cout<<"Datos no encontrados"<<endl;
+                cout<<"Desea ingresar de nuevo?1.-SÍ 2.-NO"<<endl;
+                cin>>opc;
+                if(opc!=1){
+                    loggCont=false
+                }
+            }
+        }
+        while(menuCont){
+
+            switch log_exit{
+                case 0:
+                    cout<<"--Admin menu--"<<endl;
+                    cout<<"1.-Agregar usuario"<<endl<<"2.-Agregar libro......."<<endl
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+                    break;
+            }
+        }
+    }
     void Biblioteca::agregarLibro(Libro* libro){
         if(libro->dispCheck()&&isbnCheck(libro)){
             LibrosBiblioteca.push_back(libro);
