@@ -46,11 +46,14 @@ bool Biblioteca::isbnCheck(Libro* libro){
         return exit;
     }
     void Biblioteca::menu(){
+
         string id, pass;
+        //variables de estado del logger y el menu
         bool menuCont=true, loggCont=true;
-        int log_exit;
-        int opc;
-        int menuChan;
+        int log_exit;//salida del logger
+        int opc;//opcion para el reingreso de datos
+        int menuChan;//opcion del menu
+        //logger implementado
         while(loggCont){
             cout<<"Ingrese su id de usuario: "endl;
             cin>>id;
@@ -68,17 +71,100 @@ bool Biblioteca::isbnCheck(Libro* libro){
                 }
             }
         }
+
+        //impresion de menú
         while(menuCont){
 
             switch log_exit{
                 case 0:
                     cout<<"--Admin menu--"<<endl;
-                    cout<<"1.-Agregar usuario"<<endl<<"2.-Agregar libro......."<<endl
+                    cout<<"1.-Agregar usuario"<<endl<<"2.-Agregar libro"<<endl<<"3.-Prestamo"<<endl<<"4.-Devolución"<<endl<<"5.-Buscar libro"<<endl<<"6.-Buscar usuario"<<endl<<"7.-Salir"<<endl
+                    cin>>menuChan<<endl;
+                    switch menuChan{
+                    case 1:
+                        int selector;
+                        string id, name,email,pass,carrera,division;
+                        int time = 7;
+                        cout<<"ingrese el id del usuario"<<endl;
+                        cin>>id<<endl;
+                        cout<<"ingrese el nombre del usuario"<<endl;
+                        cin>>name<<endl;
+                        cout<<"ingrese el email del usuario"<<endl;
+                        cin>>email<<endl;
+                        cout<<"ingrese la contraseña del usuario"<<endl;
+                        cin>>pass<<endl;
+                        cout<<"El usuario es estudiante o profesor? 1.-Estudiante 2.-Profesor"<<endl;
+                        cin>>selector<<endl;
+                        if(selector == 1){
+                            cout<<"ingrese la carrera del usuario"<<endl;
+                            cin>>carrera<<endl;
+                            UsuarioEstudiante* usE = new UsuarioEstudiante(id, name, email, carrera, pass, time);
+                            agregarUsuario(usE);
+                        }else if(selector == 2){
+                            cout<<"ingrese la division del usuario"<<endl;
+                            cin>>division<<endl;
+                            UsuarioProfesor* usP = new UsuarioProfesor(id, name, email, division, pass, time);
+                            agregarUsuario(usP);
+                        }else{
+                            cout<<"Opcion de usuario invalida"<<endl;
+                        }
+                        break;
+                    case 2:
+                        string isbn, titulo,autor,tema;
+                        int anio;
+                        int selector;
+                        cout<<"ingrese el isbn del libro"<<endl;
+                        cin>>isbn<<endl;
+                        cout<<"ingrese el titulo del libro"<<endl;
+                        cin>>titulo<<endl;
+                        cout<<"ingrese el autor del libro"<<endl;
+                        cin>>autor<<endl;
+                        cout<<"ingrese año de publicacion"<<endl;
+                        cin>>anio<<endl;
+                        cout<<"El libro es de ficcion o de otro tema? 1.-Ficcion 2.-Otro"<<endl;
+                        cin>>selector<<endl;
+                        if(selector == 1){
+                            LibroFicion* libF = new LibroFicion(isbn, titulo, autor, anio, "Ficcion");
+                            agregarUsuario(usE);
+                        }else if(selector == 2){
+                            cout<<"ingrese el tema del libro"<<endl
+                            cin>>tema<<endl;
+                            LibroNoFicion* libO = new LibroNoFicion(isbn, titulo, autor, anio, tema);
+                            agregarUsuario(usP);
+                        }else{
+                            cout<<"Opcion de libro invalida"<<endl;
+                        }
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    }
                     break;
                 case 1:
-
+                    cout<<"--Admin menu--"<<endl;
+                    cout<<"1.-Prestamo"<<endl<<"2.-Devolución"<<endl<<"3.-Buscar libro"<<endl<<"4.-Buscar usuario"<<endl<<"5.-Salir"<<endl
+                    cin>>menuChan<<endl;
+                    switch menuChan{
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
                     break;
                 case 2:
+                    menuCont=false;
                     break;
             }
         }
