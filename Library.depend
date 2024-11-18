@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1731903972 source:c:\users\alann\onedrive\escritorio\actividad2\bibliotecametodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Libraryh.h"
+
+1731903948 c:\users\alann\onedrive\escritorio\actividad2\libraryh.h
+	<string>
+	<iostream>
+	<vector>
+
+1731903972 source:c:\users\alann\onedrive\escritorio\actividad2\interfaz.cpp
+	<iostream>
+	<iostream>
+	<stdlib.h>
+	<string>
+	"Libraryh.h"
+
+1731903972 source:c:\users\alann\onedrive\escritorio\actividad2\librometodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Libraryh.h"
+
+1731903972 source:c:\users\alann\onedrive\escritorio\actividad2\usuariometodos.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Libraryh.h"
+

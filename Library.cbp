@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Actividad2" />
+		<Option title="Library" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -32,10 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Act2.h" />
-		<Unit filename="Actividad2Tests.cpp" />
 		<Unit filename="BibliotecaMetodos.cpp" />
 		<Unit filename="Interfaz.cpp" />
+		<Unit filename="Libraryh.h" />
 		<Unit filename="LibroMetodos.cpp" />
 		<Unit filename="UsuarioMetodos.cpp" />
 		<Extensions>
