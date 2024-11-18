@@ -23,7 +23,7 @@
 	<string>
 	"Act2.h"
 
-1729216645 c:\users\alann\onedrive\escritorio\actividad2\act2.h
+1731898601 c:\users\alann\onedrive\escritorio\actividad2\act2.h
 	<string>
 	<iostream>
 	<vector>
@@ -34,37 +34,37 @@
 	<vector>
 	"Act2.h"
 
-1729220902 source:c:\users\alann\onedrive\escritorio\actividad2\bibliotecametodos.cpp
+1731902341 source:c:\users\alann\onedrive\escritorio\actividad2\bibliotecametodos.cpp
 	<string>
 	<iostream>
 	<vector>
 	"Act2.h"
 
-1729218210 source:c:\users\alann\onedrive\escritorio\actividad2\librometodos.cpp
+1730696779 source:c:\users\alann\onedrive\escritorio\actividad2\librometodos.cpp
 	<string>
 	<iostream>
 	<vector>
 	"Act2.h"
 
-1729220030 source:c:\users\alann\onedrive\escritorio\actividad2\usuariometodos.cpp
+1731889865 source:c:\users\alann\onedrive\escritorio\actividad2\usuariometodos.cpp
 	<string>
 	<iostream>
 	<vector>
 	"Act2.h"
 
-1730239269 source:c:\users\usuario\documents\gitpoo\actividad2tests.cpp
+1731017086 source:c:\users\usuario\documents\gitpoo\actividad2tests.cpp
 	<iostream>
 	<iostream>
 	<stdlib.h>
 	<string>
 	"Act2.h"
 
-1730239787 c:\users\usuario\documents\gitpoo\act2.h
+1731017944 c:\users\usuario\documents\gitpoo\act2.h
 	<string>
 	<iostream>
 	<vector>
 
-1729807831 source:c:\users\usuario\documents\gitpoo\bibliotecametodos.cpp
+1731017050 source:c:\users\usuario\documents\gitpoo\bibliotecametodos.cpp
 	<string>
 	<iostream>
 	<vector>
@@ -76,9 +76,23 @@
 	<vector>
 	"Act2.h"
 
-1730239080 source:c:\users\usuario\documents\gitpoo\usuariometodos.cpp
+1731017050 source:c:\users\usuario\documents\gitpoo\usuariometodos.cpp
 	<string>
 	<iostream>
 	<vector>
+	"Act2.h"
+
+1731017240 source:c:\users\usuario\documents\gitpoo\interfaz.cpp
+	<iostream>
+	<iostream>
+	<stdlib.h>
+	<string>
+	"Act2.h"
+
+1731903059 source:c:\users\alann\onedrive\escritorio\actividad2\interfaz.cpp
+	<iostream>
+	<iostream>
+	<stdlib.h>
+	<string>
 	"Act2.h"
 

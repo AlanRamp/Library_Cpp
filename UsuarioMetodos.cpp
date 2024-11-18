@@ -6,8 +6,8 @@ using namespace std;
 
 //USUARIO
         //constructor
-    Usuario::Usuario(string _id, string _nombre, string _email)
-    :id(_id), name(_nombre), email(_email)
+    Usuario::Usuario(string _id, string _nombre, string _email, string _pass,int _timeBook)
+    :id(_id), name(_nombre), email(_email), pass(_pass),timeBook(_timeBook)
     {}
         //registro Libros
     void Usuario::registrarPrestamo(Libro* libro){
@@ -72,13 +72,18 @@ using namespace std;
     string Usuario::emailString(){
         return email;
     }
-
+    string Usuario::passString(){
+        return pass;
+    }
+//Estudiante
 string UsuarioEstudiante::toString(){
     return (idString()+" "+nombreString()+" "+emailString()+" "+carrera);
 }
+//Profesor
 string UsuarioProfesor::toString(){
     return (idString()+" "+nombreString()+" "+emailString()+" "+division);
 }
+//Bibliotecario
 
 
 
