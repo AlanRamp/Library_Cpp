@@ -7,6 +7,7 @@
 
 int main(){
     Biblioteca biblioteca = Biblioteca();
+    //agregacion de libros y usuarios para pruebas
     LibroNoFicion Libro1("8402103472", "Noches blancas", "Fiódor Dostoyevski", 1235,"Novela psicológica");
     LibroNoFicion Libro2("8475300219", "Crimen y castigo", "Fiódor Dostoyevski", 671, "Novela psicológica");
     LibroNoFicion Libro3("8422543001", "Los hermanos Karamazov", "Fiódor Dostoyevski", 824, "Novela psicológica");
@@ -35,6 +36,11 @@ int main(){
     biblioteca.agregarLibro(&Libro9);
     biblioteca.agregarLibro(&Libro10);
     system("cls");
+
+
+
+
+    //inicio de programa
     biblioteca.menu();
     return 0;
 }
