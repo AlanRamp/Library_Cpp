@@ -80,11 +80,11 @@ bool Biblioteca::isbnCheck(Libro* libro){
             system("cls");
                     if(log_exit==0){
                         cout<<"--Admin menu--"<<endl;
-                        cout<<"1.-Prestamo"<<endl<<"2.-Devolución"<<endl<<"3.-Buscar libro"<<endl<<"4.-Mostrar libros"<<endl<<"5.-Salir"<<endl<<"Opciones de administrador"<<endl<<"6.-Mostrar usuarios"<<endl<<"7.-Agregar usuario"<<endl<<"8.-Agregar libro"<<endl<<"9.-Buscar usuario"<<endl;
+                        cout<<"1.-Prestamo"<<endl<<"2.-Devolucion"<<endl<<"3.-Buscar libro"<<endl<<"4.-Mostrar libros"<<endl<<"5.-Salir"<<endl<<"Opciones de administrador"<<endl<<"6.-Mostrar usuarios"<<endl<<"7.-Agregar usuario"<<endl<<"8.-Agregar libro"<<endl<<"9.-Buscar usuario"<<endl;
                         cin>>menuChan;
                     }else if(log_exit==1){
                         cout<<"--User menu--"<<endl;
-                        cout<<"1.-Prestamo"<<endl<<"2.-Devolución"<<endl<<"3.-Buscar libro"<<endl<<"4.-Mostrar libros"<<endl<<"5.-Salir"<<endl;
+                        cout<<"1.-Prestamo"<<endl<<"2.-Devolucion"<<endl<<"3.-Buscar libro"<<endl<<"4.-Mostrar libros"<<endl<<"5.-Salir"<<endl;
                         cin>>menuChan;
                     }else{
                         system("cls");
@@ -141,7 +141,42 @@ bool Biblioteca::isbnCheck(Libro* libro){
                                 cout<<"opcion invalida"<<endl;
                             }
                             break;}
+
                         case 7:{
+                            //agregar usuario
+                            if(log_exit==0){
+                                system("cls");
+                                string id, name,email,pass,carrera,division;
+                                cout<<"ingrese el id del usuario"<<endl;
+                                cin>>id;
+                                cout<<"ingrese el nombre del usuario"<<endl;
+                                cin>>name;
+                                cout<<"ingrese el email del usuario"<<endl;
+                                cin>>email;
+                                cout<<"ingrese la contraseña del usuario"<<endl;
+                                cin>>pass;
+                                cout<<"El usuario es estudiante o profesor? 1.-Estudiante 2.-Profesor"<<endl;
+                                cin>>selector;
+                                if(selector == 1){
+                                    cout<<"ingrese la carrera del usuario"<<endl;
+                                    cin>>carrera;
+                                    UsuarioEstudiante* usE = new UsuarioEstudiante(id, name, email, carrera, pass, time);
+                                    agregarUsuario(usE);
+
+                                }else if(selector == 2){
+                                    cout<<"ingrese la division del usuario"<<endl;
+                                    cin>>division;
+                                    UsuarioProfesor* usP = new UsuarioProfesor(id, name, email, division, pass, time);
+                                    agregarUsuario(usP);
+
+                            }else{
+                                cout<<"Opcion de usuario invalida"<<endl;
+                            }
+                            system("pause");
+                            }else{cout<<"opcion invalida"<<endl;}
+
+                            break;}
+                        case 8:{
                             //agregar libro
                             if(log_exit==0){
                             system("cls");
@@ -160,13 +195,13 @@ bool Biblioteca::isbnCheck(Libro* libro){
                             if(selector == 1){
                                 LibroFicion* libF = new LibroFicion(isbn, titulo, autor, anio, "Ficcion");
                                 agregarLibro(libF);
-                                cout<<"Libro de ficcion agregado con exito!"<<endl;
+
                             }else if(selector == 2){
                                 cout<<"ingrese el tema del libro"<<endl;
                                 cin>>tema;
                                 LibroNoFicion* libO = new LibroNoFicion(isbn, titulo, autor, anio, tema);
                                 agregarLibro(libO);
-                                cout<<"Libro agregado con exito!"<<endl;
+
                             }else{
                                 cout<<"Opcion de libro invalida"<<endl;
                             }
@@ -175,41 +210,6 @@ bool Biblioteca::isbnCheck(Libro* libro){
                             break;
 
                             }
-                        case 8:{
-                            //agregar usuario
-                            if(log_exit==0){
-                                system("cls");
-                                string id, name,email,pass,carrera,division;
-                                cout<<"ingrese el id del usuario"<<endl;
-                                cin>>id;
-                                cout<<"ingrese el nombre del usuario"<<endl;
-                                cin>>name;
-                                cout<<"ingrese el email del usuario"<<endl;
-                                cin>>email;
-                                cout<<"ingrese la contraseña del usuario"<<endl;
-                                cin>>pass;
-                                cout<<"El usuario es estudiante o profesor? 1.-Estudiante 2.-Profesor"<<endl;
-                                cin>>selector;
-                                if(selector == 0){
-                                    cout<<"ingrese la carrera del usuario"<<endl;
-                                    cin>>carrera;
-                                    UsuarioEstudiante* usE = new UsuarioEstudiante(id, name, email, carrera, pass, time);
-                                    agregarUsuario(usE);
-                                    cout<<"Estudiante agregado con exito!"<<endl;
-                                }else if(selector == 2){
-                                    cout<<"ingrese la division del usuario"<<endl;
-                                    cin>>division;
-                                    UsuarioProfesor* usP = new UsuarioProfesor(id, name, email, division, pass, time);
-                                    agregarUsuario(usP);
-                                    cout<<"Profesor agregado con exito!"<<endl;
-                            }else{
-                                cout<<"Opcion de usuario invalida"<<endl;
-                            }
-                            system("pause");
-                            }else{cout<<"opcion invalida"<<endl;}
-
-                            break;}
-
                         case 9:{
                             //buscar usuarios;
                             if(log_exit==0){
